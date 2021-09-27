@@ -27,7 +27,7 @@ By default the backends show the following information:
  - X-Forwarded-Host: Custom HTTP header containing the rewritten hostname (if applicable)
  - X-Forwarded-Server: Custom HTTP header indicating the requests original hostname (if applicable)
 
-See [Sinatra Docs](sinatra-docs) for more possibilities.
+See [Sinatra Docs][sinatra-docs] for more possibilities.
 
 [Docker]: https://docs.docker.com/get-docker/ "Get Docker | Docker Documentation"
 [docker-compose]: https://docs.docker.com/compose/install/ "Install Docker Compose | Docker Documentation"
