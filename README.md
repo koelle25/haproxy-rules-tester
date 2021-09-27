@@ -29,7 +29,7 @@ By default the backends show the following information:
 
 See [Sinatra Docs](sinatra-docs) for more possibilities.
 
-[Docker](https://docs.docker.com/get-docker/)
-[docker-compose](https://docs.docker.com/compose/install/)
-[g-pages](https://docs.gitlab.com/ee/user/project/pages/)
-[sinatra-docs](https://rubydoc.info/gems/sinatra)
+[Docker]: https://docs.docker.com/get-docker/ "Get Docker | Docker Documentation"
+[docker-compose]: https://docs.docker.com/compose/install/ "Install Docker Compose | Docker Documentation"
+[g-pages]: https://docs.gitlab.com/ee/user/project/pages/ "GitLab Pages Documentation"
+[sinatra-docs]: https://rubydoc.info/gems/sinatra "Sinatra Documentation (quickly create web applications in Ruby)"
