@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  haproxy:
+    image: haproxy:2.2.17-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - "./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro"
+    depends_on:
+      success_backend:
+        condition: service_healthy
+      fail_backend:
+        condition: service_healthy
+
+  success_backend:
+    build: ./backend
+    command: "success 4567"
+    volumes:
+      - "./backend/main.rb:/usr/src/app/main.rb:ro"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4567"]
+      interval: 3s
+      start_period: 0s
+
+  fail_backend:
+    build: ./backend
+    command: "fail 4568"
+    volumes:
+      - "./backend/main.rb:/usr/src/app/main.rb:ro"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4568"]
+      interval: 3s
+      start_period: 0s
