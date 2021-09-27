@@ -12,10 +12,10 @@ If you want to watch the logs you can use `docker-compose logs -f`.
 
 The haproxy container listens on your http://localhost/ (default port 80). If you already have some other service listening change the port mapping in **docker-compose.yml** e.g. to "8080:80". Then you can instead visit http://localhost:8080/.
 
-You can easily edit **haproxy.cfg** to test any rules and settings you'd like. After your changes you either have to:  
-Reload the haproxy process running inside the container: `docker kill -s HUP haproxy-rules-tester_haproxy_1` (you may have to adjust the container name).  
-OR  
-Restart the haproxy container: `docker-compose restart haproxy`
+You can easily edit **haproxy.cfg** to test any rules and settings you'd like. After your changes you either have to:
+ - reload the HAProxy process running inside the container: `docker kill -s HUP haproxy-rules-tester_haproxy_1` (you may have to adjust the container name).  
+ - OR  
+ - restart the HAProxy container: `docker-compose restart haproxy`
 
 By default the backends show the following information:
  - Status: `success` if your rules/ACLs were applied and forwarded your request to the success_backend, `fail` otherwise
