@@ -7,7 +7,8 @@ You must already have installed [Docker] and [docker-compose].
 The included example rewrites requests for [GitLab Pages][g-pages]. Usually it requires that a projects Pages-Website is accessed via `http(s)://<owner/group>.example.io/<project>`. In my case I did not have privileges to create a wildcard or additional subdomains for `example.io`. This example rewrites requests, so you can instead call `http://example.io/<owner/group>/<project>` and internally it gets converted to the "correct" URL which the backend then sees.
 
 ## Usage
-Fire up the environment: `docker-compose up -d`. If you want to watch the logs you can use `docker-compose logs -f`.
+Fire up the environment: `docker-compose up -d`.  
+If you want to watch the logs you can use `docker-compose logs -f`.
 
 The haproxy container listens on your http://localhost/ (default port 80). If you already have some other service listening change the port mapping in **docker-compose.yml** e.g. to "8080:80". Then you can instead visit http://localhost:8080/.
 
